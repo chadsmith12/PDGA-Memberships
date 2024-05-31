@@ -1,26 +1,12 @@
 <template>
   <div class="grid gap-6 max-w-6xl w-full mx-auto">
     <div class="grid gap-6 lg:grid-cols-2">
-      <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden" data-v0-t="card">
-        <div class="space-y-1.5 p-6 flex flex-row items-center border-b">
-          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
-            Average Members per Day
-          </h3>
-          <p class="text-sm text-muted-foreground ml-auto">
-            <span class="font-semibold text-2xl">{{ averagePerDay.toFixed(0) }}</span>
-          </p>
-        </div>
-      </div>
-      <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden" data-v0-t="card">
-        <div class="space-y-1.5 p-6 flex flex-row items-center border-b">
-          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
-            New Members Yesterday
-          </h3>
-          <p class="text-sm text-muted-foreground ml-auto">
-            <span class="font-semibold text-2xl">{{ membersYesterday }}</span>
-          </p>
-        </div>
-      </div>
+      <DashboardCard title="Average Members per data">
+        {{ averagePerDay.toFixed(0) }}
+      </DashboardCard>
+      <DashboardCard title="New Members Yesterday">
+        {{ membersYesterday }}
+      </DashboardCard>
     </div>
   </div>
 </template>
