@@ -1,7 +1,7 @@
 <template>
   <div class="grid gap-6 max-w-6xl w-full mx-auto">
     <div class="grid gap-6 lg:grid-cols-2">
-      <DashboardCard title="Average Members per data">
+      <DashboardCard title="Average Members per day">
         {{ averagePerDay.toFixed(0) }}
       </DashboardCard>
       <DashboardCard title="New Members Yesterday">
